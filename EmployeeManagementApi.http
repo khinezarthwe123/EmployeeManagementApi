@@ -1,0 +1,42 @@
+@EmployeeManagementApi_HostAddress = http://localhost:5049
+
+GET {{EmployeeManagementApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{EmployeeManagementApi_HostAddress}}/api/employees
+Content-Type: application/json
+
+{
+    "name": "Test",
+    "email": "john@example.com",
+    "salary": 60000
+}
+
+###
+
+GET {{EmployeeManagementApi_HostAddress}}/api/employees
+Content-Type: application/json
+
+###
+
+GET {{EmployeeManagementApi_HostAddress}}/api/employees/6
+Content-Type: application/json
+
+###
+
+PUT  {{EmployeeManagementApi_HostAddress}}/api/employees/6
+Content-Type: application/json
+
+{
+    "id": 6,
+    "name": "John Smith",
+    "email": "john@example.com",
+    "salary": 60000
+}
+
+###
+
+DELETE  {{EmployeeManagementApi_HostAddress}}/api/employees/1
+Content-Type: application/json
